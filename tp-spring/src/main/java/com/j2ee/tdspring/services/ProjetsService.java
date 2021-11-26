@@ -20,6 +20,10 @@ public class ProjetsService{
     public Projets getProjetsById(Integer id) {
         return projetsRepository.findById(id).orElse(null);
     }
+    
+    public Projets getParticpantsProjets(Integer id) {
+        return projetsRepository.findById(id).orElse(null);
+    }
 
     public List<Projets> getProjets() {
         return projetsRepository.findAll();
