@@ -13,13 +13,12 @@ import javax.validation.Valid;
 
 @Entity
 @Table(name="patients")
-public class Patients {
+public class Users {
 	
 	
 		@Id
     	@Column(name="id", unique=true, nullable=false)
     	@GeneratedValue(strategy=GenerationType.IDENTITY)
-		@ManyToMany (mappedBy = "nb_patient")
     	public int id;
 
 		@Valid
@@ -33,6 +32,10 @@ public class Patients {
 	 	@Valid
 	 	@Column(name="Lastname")
 	 	private String lastname;
+	 	
+		@Valid
+	 	@Column(name="isAuthor")
+	 	private Boolean isAuthor;
 	 	
 	 	public String getUsername() {
 			return username;
