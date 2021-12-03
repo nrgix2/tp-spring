@@ -24,6 +24,9 @@ public class Messages {
 	    @Column(name="MessageContent")
 	    private String messagecontent;
 	 	
+	 	@Valid
+	 	@Column(name="Likes")
+	 	private String likes;
 
 	 	public int getId() {
 			return id;
@@ -55,9 +58,6 @@ public class Messages {
 		}
 
 
-		@Valid
-	    @Column(name="Likes")
-	    private String likes;
 	 	
 	 
 

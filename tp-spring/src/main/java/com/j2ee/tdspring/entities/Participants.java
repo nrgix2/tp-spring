@@ -6,33 +6,28 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.validation.Valid;
 
 
 @Entity
-@Table(name="patients")
-public class Patients {
+@Table(name="participants")
+public class Participants {
 	
 	
 		@Id
     	@Column(name="id", unique=true, nullable=false)
     	@GeneratedValue(strategy=GenerationType.IDENTITY)
-		@ManyToMany (mappedBy = "nb_patient")
     	public int id;
 
-		@Valid
+	 	@Valid
 	    @Column(name="Username")
 	    private String username;
 	 	
+
 	 	@Valid
 	    @Column(name="Firstname")
 	    private String firstname;
-	 	
-	 	@Valid
-	 	@Column(name="Lastname")
-	 	private String lastname;
 	 	
 	 	public String getUsername() {
 			return username;
@@ -56,7 +51,13 @@ public class Patients {
 
 		public void setLastname(String lastname) {
 			this.lastname = lastname;
-		}	 	
+		}
+
+		@Valid
+	    @Column(name="Lastname")
+	    private String lastname;
+	 	
+	 	
 
 		public int getId() {
 			return id;
