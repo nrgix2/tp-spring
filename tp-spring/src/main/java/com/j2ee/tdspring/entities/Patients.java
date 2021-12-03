@@ -19,7 +19,6 @@ public class Patients {
 		@Id
     	@Column(name="id", unique=true, nullable=false)
     	@GeneratedValue(strategy=GenerationType.IDENTITY)
-		@ManyToMany (mappedBy = "nb_patient")
     	public int id;
 
 		@Valid

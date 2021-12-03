@@ -21,7 +21,7 @@ public class ParticipantsController {
     public Participants addOrUpdateParticipants(@RequestBody Participants participants) {
         return participantsService.createOrUpdate(participants);
     }
-    
+  /*  
     @GetMapping("/participants/accept")
     public Participants acceptParticipant(@RequestParam(value = "id") Integer id) {
         return participantsService.acceptParticipant(id);
@@ -31,7 +31,7 @@ public class ParticipantsController {
     public Participants declineParticipant(@RequestParam(value = "id") Integer id) {
         return participantsService.declineParticipant(id);
     }
-
+*/
     @GetMapping("/participants/all")
     public List<Participants> getParticipants() {
         return participantsService.getParticipants();

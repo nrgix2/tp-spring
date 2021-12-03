@@ -27,10 +27,13 @@ public class ProjetsController {
         return projetsService.getProjets();
     }
     
+    /*
     @GetMapping("/projets/{name}/particpants")
     public List<Projets> addParticipantsToProject(@RequestParam(value = "name") String name) {
         return projetsService.getParticipants();
     }
+    
+    */
 
     @DeleteMapping("/projets")
     public void deleteProjets(@RequestParam(value = "id") Integer id) {

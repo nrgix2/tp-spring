@@ -42,10 +42,6 @@ public class Projets {
 	 	
 	 	@Valid
 	 	@JsonIgnore
-	 	@ManyToMany
-	 	@JoinTable(name = "nb_patients_on_projects",
-	 	joinColumns = @JoinColumn(name = "project_id"),
-	 	inverseJoinColumns = @JoinColumn(name = "patient_id"))
 	    private int nb_patient;
 	 	
 	 	@Valid
@@ -63,15 +59,6 @@ public class Projets {
 	    @Column(name="motclef", length=30, nullable=false)
 	    private String motclef;
 	 	
-	 	@Valid
-	 	@JsonIgnore
-	    @Column(name="requetelist", length=30, nullable=false)
-	    private List <Messages> requetelist;
-	 	
-	 	@Valid
-	 	@JsonIgnore
-	    @Column(name="participantlist", length=30, nullable=false)
-	    private List <Patients> participantlist;
 	 	
 	 	/**
 		 * @return the name
@@ -185,51 +172,7 @@ public class Projets {
 			this.motclef = motclef;
 		}
 
-		/**
-		 * @return the requetelist
-		 */
-		public List<Messages> getRequetelist() {
-			return requetelist;
-		}
 
-		/**
-		 * @param requetelist the requetelist to set
-		 */
-		public void setRequetelist(List<Messages> requetelist) {
-			this.requetelist = requetelist;
-		}
 
-		/**
-		 * @return the participantlist
-		 */
-		public List<Patients> getParticipantlist() {
-			return participantlist;
-		}
-
-		/**
-		 * @param participantlist the participantlist to set
-		 */
-		public void setParticipantlist(List<Patients> participantlist) {
-			this.participantlist = participantlist;
-		}
-
-		/**
-		 * @return the abonneeslist
-		 */
-		public List<Patients> getAbonneeslist() {
-			return abonneeslist;
-		}
-
-		/**
-		 * @param abonneeslist the abonneeslist to set
-		 */
-		public void setAbonneeslist(List<Patients> abonneeslist) {
-			this.abonneeslist = abonneeslist;
-		}
-
-		@Valid
-	 	@JsonIgnore
-	    @Column(name="abonneeslist", length=30, nullable=false)
-	    private List <Patients> abonneeslist;
-
+	
 }

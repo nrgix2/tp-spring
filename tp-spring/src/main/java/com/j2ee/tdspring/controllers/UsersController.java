@@ -19,23 +19,23 @@ public class UsersController {
     @Autowired
     private UsersService usersService;
 
-    @GetMapping(path = "/patients")
+    @GetMapping(path = "/users")
     public Users getUser(@RequestParam(value = "id") Integer id) {
         return usersService.getUsersById(id);
     }
 
-    @PutMapping("/patients")
-    public Users addOrUpdatePatients(@RequestBody Users user) {
+    @PutMapping("/users")
+    public Users addOrUpdateUsers(@RequestBody Users user) {
         return usersService.createOrUpdate(user);
     }
 
-    @GetMapping("/patients/all")
+    @GetMapping("/users/all")
     public List<Users> getUsers() {
         return usersService.getUsers();
     }
 
-    @DeleteMapping("/patients")
-    public void deletePatients(@RequestParam(value = "id") Integer id) {
+    @DeleteMapping("/users")
+    public void deleteUsers(@RequestParam(value = "id") Integer id) {
     	usersService.deleteUserById(id);
     }
 }
