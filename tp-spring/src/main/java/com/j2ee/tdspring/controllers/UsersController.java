@@ -36,6 +36,6 @@ public class UsersController {
 
     @DeleteMapping("/patients")
     public void deletePatients(@RequestParam(value = "id") Integer id) {
-    	UsersService.deleteUserById(id);
+    	usersService.deleteUserById(id);
     }
 }

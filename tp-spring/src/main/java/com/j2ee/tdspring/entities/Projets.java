@@ -144,20 +144,6 @@ public class Projets {
 		}
 
 		/**
-		 * @return the patient
-		 */
-		public int getPatient() {
-			return patient;
-		}
-
-		/**
-		 * @param patient the patient to set
-		 */
-		public void setPatient(int patient) {
-			this.patient = patient;
-		}
-
-		/**
 		 * @return the totalpatient
 		 */
 		public int getTotalpatient() {
